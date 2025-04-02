@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # scripts/run-e2e.sh
-=======
->>>>>>> e2e-tests
 #!/usr/bin/env bash
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -13,8 +10,3 @@ if [ "$#" -eq  "0" ]
 else
     npx playwright test --headed
 fi
-<<<<<<< HEAD
-=======
-
->>>>>>> e2e-tests
-npx playwright show-report
