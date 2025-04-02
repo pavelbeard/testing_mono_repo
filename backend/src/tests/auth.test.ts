@@ -1,5 +1,5 @@
 import prisma from './helpers/prisma'
-import bcrypt from 'bcrypt'
+import bcrypt from '@node-rs/bcrypt'
 import jwt from 'jsonwebtoken'
 import app from 'lib/createServer'
 import request from 'supertest'
