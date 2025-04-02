@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { test as base } from '@playwright/test'
 import { LoginPage } from '../pages/login.page'
 import { LocalStorage } from '../helpers/LocalStorage'
@@ -17,11 +18,25 @@ type UserDetails = {
 }
 
 export const test = base.extend<AuthFixtures>({
+=======
+import { testBase } from '@fixtures/base.fixture'
+
+import { LoginPage } from '@pages/login.page'
+import { LocalStorage } from '@helpers/LocalStorage'
+
+type AuthFixtures = {
+  loginPage: LoginPage
+  storage: LocalStorage
+}
+
+export const test = testBase.extend<AuthFixtures>({
+>>>>>>> e2e-tests
   loginPage: async ({ page }, use) => {
     const loginPage = new LoginPage(page)
     await loginPage.goto()
     await use(loginPage)
   },
+<<<<<<< HEAD
   user_credentials: async ({}, use) => {
     const username = faker.internet.userName()
     const password = faker.internet.password()
@@ -44,6 +59,8 @@ export const test = base.extend<AuthFixtures>({
 
     await use(user_credentials)
   },
+=======
+>>>>>>> e2e-tests
   storage: async ({ page }, use) => {
     const storage = new LocalStorage(page.context())
     await use(storage)

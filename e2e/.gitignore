@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 
 # Playwright
 node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
+=======
+node_modules/
+/test-results/
+/playwright-report/
+>>>>>>> e2e-tests
 /playwright/.cache/

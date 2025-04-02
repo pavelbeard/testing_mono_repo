@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { type Page } from '@playwright/test'
+=======
+import type { Page } from '@playwright/test'
+>>>>>>> e2e-tests
 
 export class LoginPage {
   readonly page: Page

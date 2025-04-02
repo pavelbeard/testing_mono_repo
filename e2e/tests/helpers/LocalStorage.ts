@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { type BrowserContext } from '@playwright/test'
+=======
+import type { BrowserContext } from '@playwright/test'
+>>>>>>> e2e-tests
 
 export class LocalStorage {
   private context: BrowserContext
@@ -12,6 +16,7 @@ export class LocalStorage {
       const origin = storage.origins.find(
         ({ origin }) => origin === 'http://localhost:5173'
       )
+<<<<<<< HEAD
 
       if (origin) {
         return origin.localStorage.reduce(
@@ -19,6 +24,11 @@ export class LocalStorage {
             ...acc,
             [curr.name]: curr.value
           }),
+=======
+      if (origin) {
+        return origin.localStorage.reduce(
+          (acc, curr) => ({ ...acc, [curr.name]: curr.value }),
+>>>>>>> e2e-tests
           {}
         )
       }

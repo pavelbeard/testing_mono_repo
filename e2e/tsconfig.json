@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */
@@ -111,3 +112,26 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   }
 }
+=======
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "lib": [
+      "esnext"
+    ],
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@fixtures/*": [
+        "./tests/fixtures/*"
+      ],
+      "@pages/*": [
+        "./tests/pages/*"
+      ],
+      "@helpers/*": [
+        "./tests/helpers/*"
+      ]
+    }
+  }
+}
+>>>>>>> e2e-tests

@@ -1,0 +1,16 @@
+# .github/workflows/tests.yml
+name: Tests
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build
+      - name: Run tests
+        uses: ./.github/actions/build
+        with:
+          run: pnpm run tests:backend:unit
