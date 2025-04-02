@@ -14,3 +14,15 @@ jobs:
         uses: ./.github/actions/build
         with:
           run: pnpm run tests:backend:unit
+  integration-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/build
+      - uses: ./.github/actions/docker-compose
+      - name: "Run tests"
+        run: pnpm run tests:backend:int
+env:
+  DATABASE_URL: postgres://postgres:postgres@localhost:5433/postgres
+  VITE_API_URL: http://localhost:3000
+  API_SECRET: secret
